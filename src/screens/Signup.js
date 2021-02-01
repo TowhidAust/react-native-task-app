@@ -1,37 +1,36 @@
-import { Button, Form, Icon, Input, Item, Label } from 'native-base';
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text,StyleSheet } from 'react-native'
+import { Button, Form, Icon, Input, Item, Label } from 'native-base';
 
 
-export default function Login({navigation}) {
+export default function Signup({navigation}) {
     return (
 
         <View style={styles.container}>
           <View style={styles.containerInner}>
             <View style={styles.iconContainer}>
-              <Icon style={styles.loginIcon} type="AntDesign" name="user" />
+              <Icon style={styles.loginIcon} type="AntDesign" name="addusergroup" />
               {/* <Text>Task App</Text> */}
             </View>
             <Form>
               <Item floatingLabel style={styles.input}>
-                <Label>Username</Label>
+                <Label>Name</Label>
+                <Input />
+              </Item>
+              <Item floatingLabel style={styles.input}>
+                <Label>Email</Label>
                 <Input />
               </Item>
               <Item floatingLabel last style={styles.input}>
                 <Label>Password</Label>
-                <Input />
+                <Input secureTextEntry={true}/>
               </Item>
 
               <Button block class rounded style={styles.loginButton} onPress={()=>navigation.navigate('Home')}>
-                <Text style={styles.loginBtnText}>Log In</Text>
+                <Text style={styles.loginBtnText}>Sign Up</Text>
               </Button>
 
-              <View style={styles.notSignedupContainer}>
-                <Text>Not Signed Up?</Text>
-                <Button transparent onPress={()=> navigation.navigate('Signup')}>
-                  <Text style={styles.signupButtonText}> Sign Up </Text>
-                </Button>
-              </View>
+             
             </Form>
           </View>
       </View>
@@ -83,17 +82,6 @@ const styles = StyleSheet.create({
     loginBtnText: {
       color: "white",
     },
-
-    notSignedupContainer: {
-      display: "flex",
-      justifyContent: "flex-end",
-      alignItems: "center",
-      flexDirection:"row",
-      paddingTop: 10,
-      paddingRight:25,
-    },
-    signupButtonText: {
-      color: "#50D2C2"
-    }
     
 });
+

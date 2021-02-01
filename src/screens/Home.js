@@ -1,13 +1,17 @@
 import React from 'react'
 import { View, Text } from 'react-native'
 
-import { Container, Header, Content, Footer, FooterTab, Button, Icon } from 'native-base';
+import { Footer, FooterTab, Button, Icon } from 'native-base';
+import { ScrollView } from 'react-native-gesture-handler';
 
 
 export default function Home() {
     return (
-    <Container>
-        <Text>GG</Text>
+    <View style={{flex: 1}}>
+        <ScrollView>
+          <Text>GG lorem ipsum dolor sinet</Text>
+        </ScrollView>
+        
         <Footer>
           <FooterTab style={{backgroundColor:"white"}}>
             <Button vertical>
@@ -28,6 +32,6 @@ export default function Home() {
             </Button>
           </FooterTab>
         </Footer>
-      </Container>
+      </View>
     )
 }

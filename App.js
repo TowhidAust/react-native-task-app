@@ -15,6 +15,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 import Home from './src/screens/Home';
+import Signup from './src/screens/Signup';
 
 
 export default function App() {
@@ -24,6 +25,7 @@ export default function App() {
       <Stack.Navigator initialRouteName="Login">
         <Stack.Screen name="Login" component={Login} options={{ title: 'Login' }} />
         <Stack.Screen name="Home" component={Home} options={{ title: 'Home' }} />
+        <Stack.Screen name="Signup" component={Signup} options={{ title: 'Signup' }} />
       </Stack.Navigator>
     </NavigationContainer>
   )
